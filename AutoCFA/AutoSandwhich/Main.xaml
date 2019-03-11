@@ -1,0 +1,581 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Main_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open Browser" Hidden="False" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="www.mycfavisit.com">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_1" />
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+    <Sequence DisplayName="Web">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'Chick fil Page'" InformativeScreenshot="66e70b836c7d5b9de7e5b208674e8b9e" Selector="&lt;html title='Chick-fil-A Customer Experience Survey - Welcome' /&gt;">
+        <ui:BrowserScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do">
+              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  CN1'" EmptyField="True" SendWindowMessages="False" SimulateType="True" Text="2960202">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="453c90a91bd5d8990582f003585f34a2" Selector="&lt;webctrl id='CN1' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:TypeInto.Target>
+                <sap2010:WorkflowViewState.IdRef>TypeInto_1</sap2010:WorkflowViewState.IdRef>
+              </ui:TypeInto>
+              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  CN2'" EmptyField="True" SendWindowMessages="False" SimulateType="True" Text="03981">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0c6a95bff869d50ccafcc251103717ff" Selector="&lt;webctrl id='CN2' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:TypeInto.Target>
+                <sap2010:WorkflowViewState.IdRef>TypeInto_2</sap2010:WorkflowViewState.IdRef>
+              </ui:TypeInto>
+              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  CN3'" EmptyField="True" SendWindowMessages="False" SimulateType="True" Text="1209">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="df8e4db4e5ebaeb70bebb54f82407d22" Selector="&lt;webctrl id='CN3' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:TypeInto.Target>
+                <sap2010:WorkflowViewState.IdRef>TypeInto_3</sap2010:WorkflowViewState.IdRef>
+              </ui:TypeInto>
+              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  CN4'" EmptyField="True" SendWindowMessages="False" SimulateType="True" Text="0214">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ca9629361ee094b298563a3eefcabf64" Selector="&lt;webctrl id='CN4' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:TypeInto.Target>
+                <sap2010:WorkflowViewState.IdRef>TypeInto_4</sap2010:WorkflowViewState.IdRef>
+              </ui:TypeInto>
+              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  CN5'" EmptyField="True" SendWindowMessages="False" SimulateType="True" Text="93">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="752b98e85b9cc065e424ead91852b18a" Selector="&lt;webctrl id='CN5' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:TypeInto.Target>
+                <sap2010:WorkflowViewState.IdRef>TypeInto_5</sap2010:WorkflowViewState.IdRef>
+              </ui:TypeInto>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  NextButton'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="78" OffsetY="25" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e011f7eee0d421c44f5223580a8d71a5" Selector="&lt;webctrl id='NextButton' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_1</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="12" OffsetY="10" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c893d4b35cc2454a73e331537fcf0065" Selector="&lt;webctrl parentid='FNSR02020' tableCol='6' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_2</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  NextButton'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="84" OffsetY="26" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="dc973e4096341e5fc3f0b0482bd59943" Selector="&lt;webctrl id='NextButton' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_3</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="10" OffsetY="13" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="496c49369742e29117b21810527cf684" Selector="&lt;webctrl parentid='FNSR08010' tableCol='6' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_4</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="11" OffsetY="14" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a74b7dc2c6a5fdfbdee22a830521093a" Selector="&lt;webctrl parentid='FNSR09010' tableCol='6' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_5</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="12" OffsetY="11" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="496c49369742e29117b21810527cf684" Selector="&lt;webctrl parentid='FNSR08010' tableCol='6' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_6</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="18" OffsetY="8" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="3d3ee3e02c5f27691e79b79109e5634c" Selector="&lt;webctrl parentid='FNSR10010' tableCol='6' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_7</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="9" OffsetY="11" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="40ee66a532cc49306db41d979e3cf06c" Selector="&lt;webctrl parentid='FNSR11515' tableCol='6' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_8</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  NextButton'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="52" OffsetY="22" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="bcaa5198075406ae52f1502f9cc04c53" Selector="&lt;webctrl id='NextButton' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_9</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  NextButton'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="62" OffsetY="20" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1cf6714582f191d9089d9bcb6e6711d9" Selector="&lt;webctrl id='NextButton' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_10</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="16" OffsetY="16" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1b89581b7bfbac6b9da55472fee6332a" Selector="&lt;webctrl parentid='FNSR06010' tableCol='6' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_11</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="16" OffsetY="19" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="63c3c665f911e37a6a30b7d49a4e79a2" Selector="&lt;webctrl parentid='FNSR00320' tableCol='6' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_12</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="10" OffsetY="20" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="216961d23c2415b38c4a1db5e9fedcf8" Selector="&lt;webctrl parentid='FNSR05010' tableCol='6' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_13</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="13" OffsetY="12" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="63c3c665f911e37a6a30b7d49a4e79a2" Selector="&lt;webctrl parentid='FNSR57100' tableCol='6' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_14</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  NextButton'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="95" OffsetY="28" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="dc973e4096341e5fc3f0b0482bd59943" Selector="&lt;webctrl id='NextButton' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_15</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="14" OffsetY="17" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c84e90879921ea121127b2a6214b7401" Selector="&lt;webctrl tableCol='3' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_16</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  NextButton'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="55" OffsetY="28" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="46f8055638e1cefc98fc3d24c27aaa6e" Selector="&lt;webctrl id='NextButton' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_17</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'TEXTAREA  S81004'" EmptyField="True" SendWindowMessages="False" SimulateType="True" Text="Food was good. Service was good. Food was a good value.">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="297ab68188314e2ca921c97100ebf550" Selector="&lt;webctrl id='S81004' tag='TEXTAREA' /&gt;" WaitForReady="COMPLETE" />
+                </ui:TypeInto.Target>
+                <sap2010:WorkflowViewState.IdRef>TypeInto_6</sap2010:WorkflowViewState.IdRef>
+              </ui:TypeInto>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  NextButton'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="104" OffsetY="9" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="489efdcec477b58c4a53a5b5b9fc47d0" Selector="&lt;webctrl id='NextButton' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_18</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="18" OffsetY="10" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6acd59e83d7afbac0f34ef73e8c9cf52" Selector="&lt;webctrl idx='1' isleaf='1' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_19</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  NextButton'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="107" OffsetY="29" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0f5c4acbecc54c7a00f5db65356d9449" Selector="&lt;webctrl id='NextButton' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_20</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="14" OffsetY="12" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="aea9f88a04836fd2061a201f9b2a4555" Selector="&lt;webctrl isleaf='1' parentid='FNSR00422' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_21</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="16" OffsetY="12" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="9fe3e785aaeee305d69af053fd65cb42" Selector="&lt;webctrl isleaf='1' parentid='FNSR00419' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_22</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  NextButton'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="84" OffsetY="18" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="008a2d47db9935308d66fd1d522f5bbb" Selector="&lt;webctrl id='NextButton' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_23</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="13" OffsetY="10" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="496c49369742e29117b21810527cf684" Selector="&lt;webctrl parentid='FNSR69104' tableCol='6' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_24</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="12" OffsetY="7" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="3a6ba92b6858e022eefccb549abe0111" Selector="&lt;webctrl parentid='FNSR65100' tableCol='6' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+                <sap2010:WorkflowViewState.IdRef>Click_25</sap2010:WorkflowViewState.IdRef>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="12" OffsetY="19" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e90644f1b0a8fe51d2d80e776d55eb13" Selector="&lt;webctrl parentid='FNSR69112' tableCol='6' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="15" OffsetY="18" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="58003d25fa86c7b81da93e29bbbb811e" Selector="&lt;webctrl parentid='FNSR65400' tableCol='6' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  NextButton'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="54" OffsetY="32" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="dc973e4096341e5fc3f0b0482bd59943" Selector="&lt;webctrl id='NextButton' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="11" OffsetY="8" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="553ea3f8e86d5e6388527fb4b4987d88" Selector="&lt;webctrl parentid='FNSR00272' tableCol='6' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="10" OffsetY="6" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="58003d25fa86c7b81da93e29bbbb811e" Selector="&lt;webctrl parentid='FNSR00273' tableCol='6' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  NextButton'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="102" OffsetY="21" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1f9501b84e0d087f51bc301dbf8c0d8b" Selector="&lt;webctrl id='NextButton' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SELECT  R34000'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="108" OffsetY="12" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="9207b6188be6da38708e76344d606280" Selector="&lt;webctrl id='R34000' tag='SELECT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  R34000'" Item="10 - 12 times">
+                <ui:SelectItem.Items>
+                  <scg:List x:TypeArguments="x:String" Capacity="16">
+                    <x:String>- Select One -</x:String>
+                    <x:String>1 time</x:String>
+                    <x:String>2 times</x:String>
+                    <x:String>3 times</x:String>
+                    <x:String>4 times</x:String>
+                    <x:String>5 times</x:String>
+                    <x:String>6 times</x:String>
+                    <x:String>7 - 9 times</x:String>
+                    <x:String>10 - 12 times</x:String>
+                    <x:String>13 - 15 times</x:String>
+                    <x:String>16 or more times</x:String>
+                  </scg:List>
+                </ui:SelectItem.Items>
+                <ui:SelectItem.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="23477629482fcbce77fe69cdcede3992" Selector="&lt;webctrl id='R34000' tag='SELECT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:SelectItem.Target>
+              </ui:SelectItem>
+              <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  R34025'" Item="13 - 15 times">
+                <ui:SelectItem.Items>
+                  <scg:List x:TypeArguments="x:String" Capacity="16">
+                    <x:String>- Select One -</x:String>
+                    <x:String>1 time</x:String>
+                    <x:String>2 times</x:String>
+                    <x:String>3 times</x:String>
+                    <x:String>4 times</x:String>
+                    <x:String>5 times</x:String>
+                    <x:String>6 times</x:String>
+                    <x:String>7 - 9 times</x:String>
+                    <x:String>10 - 12 times</x:String>
+                    <x:String>13 - 15 times</x:String>
+                    <x:String>16 or more times</x:String>
+                  </scg:List>
+                </ui:SelectItem.Items>
+                <ui:SelectItem.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="409417313c8287d8cee6de468b14af6b" Selector="&lt;webctrl id='R34025' tag='SELECT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:SelectItem.Target>
+              </ui:SelectItem>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  NextButton'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="80" OffsetY="16" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="3a0433e08e1f4b6efb93fce4af477014" Selector="&lt;webctrl id='NextButton' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="4" OffsetY="14" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c84e90879921ea121127b2a6214b7401" Selector="&lt;webctrl parentid='FNSR00434' tableCol='3' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  NextButton'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="105" OffsetY="26" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="46f8055638e1cefc98fc3d24c27aaa6e" Selector="&lt;webctrl id='NextButton' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="12" OffsetY="12" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="14d0dea30c4597d6e159fa2ea6395822" Selector="&lt;webctrl parentid='FNSR00321' tableCol='3' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  NextButton'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="97" OffsetY="13" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="71d40b525a364b37cb37fe83ad0d9b90" Selector="&lt;webctrl id='NextButton' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  S00432'" EmptyField="True" SendWindowMessages="False" SimulateType="True" Text="[Nothing]">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="95f8c2bf4820d3c76053c9b9b035ab22" Selector="&lt;webctrl id='S00432' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  S00432'" EmptyField="False" SendWindowMessages="False" SimulateType="True" Text="Steven">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a61c1c4d3a266a9b050b81da66a154ee" Selector="&lt;webctrl id='S00432' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  S00433'" EmptyField="False" SendWindowMessages="False" SimulateType="True" Text="Buri">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="016c77002a63cae6b7d1f6723ce6efff" Selector="&lt;webctrl id='S00433' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  S93000'" EmptyField="False" SendWindowMessages="False" SimulateType="True" Text="steve.buri@gmail.com">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2a945e1e33482e3e37d8ee9b84cbc88d" Selector="&lt;webctrl id='S93000' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'INPUT  S93500'" EmptyField="False" SendWindowMessages="False" SimulateType="True" Text="steve.buri@gmail.com">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ac0ddc512d1d03db1556970ec6815ef1" Selector="&lt;webctrl id='S93500' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  NextButton'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="94" OffsetY="18" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6d37b2f662e57943a1cc1c44ba6f468e" Selector="&lt;webctrl id='NextButton' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <sap2010:WorkflowViewState.IdRef>Sequence_3</sap2010:WorkflowViewState.IdRef>
+            </Sequence>
+          </ActivityAction>
+        </ui:BrowserScope.Body>
+        <sap2010:WorkflowViewState.IdRef>BrowserScope_1</sap2010:WorkflowViewState.IdRef>
+      </ui:BrowserScope>
+      <sap2010:WorkflowViewState.IdRef>Sequence_4</sap2010:WorkflowViewState.IdRef>
+    </Sequence>
+    <sads:DebugSymbol.Symbol>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</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="200,100">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OpenBrowser_1" sap:VirtualizedContainerService.HintSize="436,199" />
+      <sap2010:ViewStateData Id="TypeInto_1" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="TypeInto_2" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="TypeInto_3" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="TypeInto_4" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="TypeInto_5" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="Click_1" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_2" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_3" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_4" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_5" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_6" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_7" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_8" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_9" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_10" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_11" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_12" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_13" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_14" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_15" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_16" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_17" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="TypeInto_6" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="Click_18" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_19" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_20" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_21" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_22" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_23" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_24" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_25" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="336,5978">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="BrowserScope_1" sap:VirtualizedContainerService.HintSize="414,6124" />
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="436,6248">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="458,6611">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="498,6691" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
